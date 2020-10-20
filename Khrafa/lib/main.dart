@@ -75,7 +75,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.book),
-            label: 'Stories',
+            label: 'Stories',   
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.music_note),

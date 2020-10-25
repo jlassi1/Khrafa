@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'BottomNavigationBar.dart';
 import 'dart:math';
 
+
 void main() {
   runApp(MyApp());
 }
@@ -42,6 +43,12 @@ class _Khrafa extends State<Khrafa> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Khrafa'),
+        flexibleSpace: Image(
+          image: AssetImage('assets/images/2.jpg'),
+          fit: BoxFit.fill,
+        ),
+        backgroundColor: Colors.transparent,
+      
       ),
       bottomNavigationBar: BottomWidget(),
       drawer: Drawer(
@@ -79,38 +86,14 @@ class _Khrafa extends State<Khrafa> {
           ],
         ),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Stack(
-              children: <Widget>[
-                CardScrollWidget(currentPage),
-                Positioned.fill(
-                  child: PageView.builder(
-                    itemCount: images.length,
-                    controller: controller,
-                    reverse: true,
-                    itemBuilder: (context, index) {
-                      return Container();
-                    },
-                  ),
-                )
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(left: 18.0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20.0),
-                    child: Image.asset("assets/2.jpg",
-                        width: 296.0, height: 222.0),
-                  ),
-                )
-              ],
-            )
-          ],
+      body:  Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/icon1.jpg"),
+            fit: BoxFit.fill,
+          ),
         ),
+        child: null /* add child content here */,
       ),
     );
   }

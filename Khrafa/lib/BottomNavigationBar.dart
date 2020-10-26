@@ -39,7 +39,7 @@ class _BottomWidgetState extends State<BottomWidget> {
   Widget build(BuildContext context) {
     return  Container(
           decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/buttom.jpg'), fit: BoxFit.fill,
+          image: DecorationImage(image: AssetImage('assets/images/2.jpg'), fit: BoxFit.fill,
           ),
           ),
           child: BottomNavigationBar(backgroundColor: Colors.transparent,
@@ -60,6 +60,7 @@ class _BottomWidgetState extends State<BottomWidget> {
       ],
       currentIndex: _selectedIndex,
       selectedItemColor: Colors.amber[800],
+      
       onTap: _onItemTapped,
       
     ),

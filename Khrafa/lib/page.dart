@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts_arabic/fonts.dart';
+import 'package:google_fonts_arabic/google_fonts_arabic.dart';
 
 class AlicePage extends StatelessWidget {
   final int page;
@@ -20,8 +22,11 @@ class AlicePage extends StatelessWidget {
                 Text(
                   "خرافة الشمعة",
                   style: TextStyle(
-                    fontSize: 24.0,
+                    fontSize: 40.0,
                     fontWeight: FontWeight.w500,
+                    fontFamily: ArabicFonts.Reem_Kufi,
+                    package: 'google_fonts_arabic',
+                    color: Colors.orange[800],
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -64,11 +69,14 @@ class AlicePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Text(
+               Text(
                   "خرافة الشمعة",
                   style: TextStyle(
-                    fontSize: 24.0,
+                    fontSize: 40.0,
                     fontWeight: FontWeight.w500,
+                    fontFamily: ArabicFonts.Reem_Kufi,
+                    package: 'google_fonts_arabic',
+                    color: Colors.orange[800],
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -113,11 +121,14 @@ class AlicePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Text(
+               Text(
                   "خرافة الشمعة",
                   style: TextStyle(
-                    fontSize: 24.0,
+                    fontSize: 40.0,
                     fontWeight: FontWeight.w500,
+                    fontFamily: ArabicFonts.Reem_Kufi,
+                    package: 'google_fonts_arabic',
+                    color: Colors.orange[800],
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -165,8 +176,11 @@ class AlicePage extends StatelessWidget {
                 Text(
                   "خرافة الشمعة",
                   style: TextStyle(
-                    fontSize: 24.0,
+                    fontSize: 40.0,
                     fontWeight: FontWeight.w500,
+                    fontFamily: ArabicFonts.Reem_Kufi,
+                    package: 'google_fonts_arabic',
+                    color: Colors.orange[800],
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -210,8 +224,11 @@ class AlicePage extends StatelessWidget {
                 Text(
                   "خرافة الشمعة",
                   style: TextStyle(
-                    fontSize: 24.0,
+                    fontSize: 40.0,
                     fontWeight: FontWeight.w500,
+                    fontFamily: ArabicFonts.Reem_Kufi,
+                    package: 'google_fonts_arabic',
+                    color: Colors.orange[800],
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -257,8 +274,11 @@ class AlicePage extends StatelessWidget {
                 Text(
                   "خرافة الشمعة",
                   style: TextStyle(
-                    fontSize: 24.0,
+                    fontSize: 40.0,
                     fontWeight: FontWeight.w500,
+                    fontFamily: ArabicFonts.Reem_Kufi,
+                    package: 'google_fonts_arabic',
+                    color: Colors.orange[800],
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -304,8 +324,11 @@ class AlicePage extends StatelessWidget {
                 Text(
                   "خرافة الشمعة",
                   style: TextStyle(
-                    fontSize: 24.0,
+                    fontSize: 40.0,
                     fontWeight: FontWeight.w500,
+                    fontFamily: ArabicFonts.Reem_Kufi,
+                    package: 'google_fonts_arabic',
+                    color: Colors.orange[800],
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -349,12 +372,15 @@ class AlicePage extends StatelessWidget {
                 Text(
                   "خرافة الشمعة",
                   style: TextStyle(
-                    fontSize: 24.0,
+                    fontSize: 40.0,
                     fontWeight: FontWeight.w500,
+                    fontFamily: ArabicFonts.Reem_Kufi,
+                    package: 'google_fonts_arabic',
+                    color: Colors.orange[800],
                   ),
                   textAlign: TextAlign.center,
                 ),
-                const SizedBox(height: 32.0),
+                //const SizedBox(height: 32.0),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -390,11 +416,14 @@ class AlicePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Text(
+               Text(
                   "خرافة الشمعة",
                   style: TextStyle(
-                    fontSize: 24.0,
+                    fontSize: 40.0,
                     fontWeight: FontWeight.w500,
+                    fontFamily: ArabicFonts.Reem_Kufi,
+                    package: 'google_fonts_arabic',
+                    color: Colors.orange[800],
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -435,11 +464,14 @@ class AlicePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Text(
+               Text(
                   "خرافة الشمعة",
                   style: TextStyle(
-                    fontSize: 24.0,
+                    fontSize: 40.0,
                     fontWeight: FontWeight.w500,
+                    fontFamily: ArabicFonts.Reem_Kufi,
+                    package: 'google_fonts_arabic',
+                    color: Colors.orange[800],
                   ),
                   textAlign: TextAlign.center,
                 ),

@@ -14,9 +14,8 @@ class Story extends StatelessWidget {
           textDirection: TextDirection.rtl,
           child: HomeScreen(),
         ),
-        theme: new ThemeData(
-          primarySwatch: Colors.green,
-        ));
+    
+        );
   }
 }
 

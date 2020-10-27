@@ -24,6 +24,7 @@ dependencies:
   google_fonts_arabic: ^1.1.7
   page_transition: "^1.1.7+2"
   flutter_gifimage: ^1.0.1
+  giffy_dialog: ^1.6.1
   flutter_bloc: ^6.0.6
   equatable: ^1.2.3
   flutter:
@@ -46,6 +47,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/
+    - assets/gif/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

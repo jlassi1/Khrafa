@@ -33,9 +33,9 @@ final List<Widget> imageSliders = imgList
                 child: Stack(
                   children: <Widget>[
                     Image.asset(item["image"],
-                        fit: BoxFit.cover, width: 1000.0, height: 2000.0),
+                        fit: BoxFit.fitHeight, width: 1000.0, height: 3500.0),
                     Positioned(
-                      bottom: 0.0,
+                      bottom: 10.0,
                       left: 0.0,
                       right: 0.0,
                       child: Container(
@@ -89,7 +89,9 @@ class Library extends StatelessWidget {
               reverse: true,
               
             ),
+            
           ),
+          
            RaisedButton(
         onPressed: () {
                 Navigator.push(context,

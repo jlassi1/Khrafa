@@ -487,20 +487,23 @@ class AlicePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 32.0),
+               // const SizedBox(height: 32.0),
                 Expanded(
                   child: Text(
                       "تبسم حمد و قلها:"
                       "\n-خذاها الي نطقها . \n",
                       style: TextStyle(fontSize: 25)),
                 ),
-                Container(
+        
+                  Container(
                   margin: const EdgeInsets.only(left: 12.0),
                   color: Colors.black26,
                   width: 160.0,
                   height: 220.0,
-                  child: Placeholder(),
+                  child: Image.asset('assets/images/candles.jpg', filterQuality: FilterQuality.high, fit: BoxFit.cover,)
+                 // child: Placeholder(),
                 ),
+               
               ],
             ),
           ),

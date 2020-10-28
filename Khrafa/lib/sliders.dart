@@ -1,15 +1,16 @@
 import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts_arabic/fonts.dart';
 import 'story.dart';
 
 final List<Map> imgList = [
   {
     "name": "خرافة الشمعة",
-    "image": 'assets/images/candle.jpg',
+    "image": 'assets/images/candle-1.jpg',
   },
   {
-    "name": "خرافة سبعة صباية في قصباية",
+    "name": "خرافة سبعة صبايا في قصباية",
     "image": 'assets/images/sabaya.jpg',
     "routeName": "/image2Dashboard"
   },
@@ -27,7 +28,7 @@ final List<Map> imgList = [
 final List<Widget> imageSliders = imgList
     .map((item) => Container(
           child: Container(
-            margin: EdgeInsets.all(5.0),
+            margin: EdgeInsets.all(3.0),
             child: ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(5.0)),
                 child: Stack(
@@ -35,7 +36,8 @@ final List<Widget> imageSliders = imgList
                     Image.asset(item["image"],
                         fit: BoxFit.fitHeight, width: 1000.0, height: 3500.0),
                     Positioned(
-                      bottom: 10.0,
+                      top: 3.0,
+                      bottom: 0.0,
                       left: 0.0,
                       right: 0.0,
                       child: Container(
@@ -50,14 +52,16 @@ final List<Widget> imageSliders = imgList
                           ),
                         ),
                         padding: EdgeInsets.symmetric(
-                            vertical: 50.0, horizontal: 80.0),
+                            vertical: 10.0, horizontal: 12.0),
                         child: Text(
                           ' ${item["name"]}',
-                          style: TextStyle(
-                            backgroundColor: Colors.white10,
-                            color: Colors.white,
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
+                          style: new TextStyle(
+                
+                            backgroundColor: Colors.transparent,
+                            color: Colors.amberAccent[700],
+                            fontFamily: ArabicFonts.Aref_Ruqaa,
+                            package: 'google_fonts_arabic',
+                            fontSize: 30.0,
                           ),
                         ),
                       ),
@@ -83,15 +87,15 @@ class Library extends StatelessWidget {
             items: imageSliders,
             carouselController: buttonCarouselController,
             options: CarouselOptions(
+              height: 520.0,
               autoPlay: true,
               aspectRatio: 0.8,
+              autoPlayAnimationDuration: Duration(milliseconds: 300),
               enlargeCenterPage: true,
               reverse: true,
-              
+  
             ),
-            
           ),
-          
            RaisedButton(
         onPressed: () {
                 Navigator.push(context,

@@ -37,6 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
         key: _controller,
         backgroundColor: Colors.white,
         showDragCutoff: false,
+        lastPage: Container(),
         children: <Widget>[
           for (var i = 0; i < 10; i++) AlicePage(page: i),
         ],

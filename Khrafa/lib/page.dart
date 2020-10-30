@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts_arabic/fonts.dart';
-import 'package:google_fonts_arabic/google_fonts_arabic.dart';
 
 class AlicePage extends StatelessWidget {
   final int page;
@@ -69,7 +68,7 @@ class AlicePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-               Text(
+                Text(
                   "خرافة الشمعة",
                   style: TextStyle(
                     fontSize: 40.0,
@@ -121,7 +120,7 @@ class AlicePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-               Text(
+                Text(
                   "خرافة الشمعة",
                   style: TextStyle(
                     fontSize: 40.0,
@@ -416,7 +415,7 @@ class AlicePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-               Text(
+                Text(
                   "خرافة الشمعة",
                   style: TextStyle(
                     fontSize: 40.0,
@@ -464,7 +463,7 @@ class AlicePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-               Text(
+                Text(
                   "خرافة الشمعة",
                   style: TextStyle(
                     fontSize: 40.0,
@@ -487,23 +486,20 @@ class AlicePage extends StatelessWidget {
                     ),
                   ],
                 ),
-               // const SizedBox(height: 32.0),
+                const SizedBox(height: 32.0),
                 Expanded(
                   child: Text(
                       "تبسم حمد و قلها:"
                       "\n-خذاها الي نطقها . \n",
                       style: TextStyle(fontSize: 25)),
                 ),
-        
-                  Container(
+                Container(
                   margin: const EdgeInsets.only(left: 12.0),
                   color: Colors.black26,
                   width: 160.0,
                   height: 220.0,
-                  child: Image.asset('assets/images/candles.jpg', filterQuality: FilterQuality.high, fit: BoxFit.cover,)
-                 // child: Placeholder(),
+                  child: Placeholder(),
                 ),
-               
               ],
             ),
           ),

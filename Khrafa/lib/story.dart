@@ -8,14 +8,13 @@ class Story extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Directionality(
-          // add this
-          textDirection: TextDirection.rtl,
-          child: HomeScreen(),
-        ),
-    
-        );
+      debugShowCheckedModeBanner: false,
+      home: Directionality(
+        // add this
+        textDirection: TextDirection.rtl,
+        child: HomeScreen(),
+      ),
+    );
   }
 }
 
@@ -37,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
         key: _controller,
         backgroundColor: Colors.white,
         showDragCutoff: false,
-        lastPage: Container(),
+        //lastPage: Container(child: Center(child: Text('The End'))),
         children: <Widget>[
           for (var i = 0; i < 10; i++) AlicePage(page: i),
         ],

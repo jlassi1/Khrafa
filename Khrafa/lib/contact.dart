@@ -5,19 +5,22 @@ class Contact extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Contact Us')),
+      appBar: AppBar(
+        title: Text('Contact Us'),
+        backgroundColor: Colors.blue[900],
+      ),
       body: ContactUs(
-        cardColor: Colors.blue,
+        cardColor: Colors.blue[900],
         textColor: Colors.white,
         logo: AssetImage('assets/images/logo.png'),
-        email: 'adoshi26.ad@gmail.com',
+        email: 'tun-admissions@holbertonschool.com',
         companyName: 'Holberton School',
         companyColor: Colors.red,
-        phoneNumber: '..',
+        phoneNumber: '+216 27 760 408',
         website: 'https://www.holbertonschool.com/',
         githubUserName: 'jlassi1',
-        linkedinURL: 'https://www.linkedin.com/in/abhishek-doshi-520983199/',
-        tagLine: 'Holberton Students',
+        linkedinURL: 'https://www.linkedin.com/school/holberton-school/',
+        tagLine: 'Portfolio Project',
         taglineColor: Colors.red,
       ),
     );

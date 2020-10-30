@@ -1,40 +1,5 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'config.dart';
-import 'home.dart';
-
-void main() => runApp(Khrafa());
-
-class Khrafa extends StatefulWidget {
-  const Khrafa({Key key}) : super(key: key);
-
-  @override
-  _KhrafaState createState() => _KhrafaState();
-}
-
-class _KhrafaState extends State<Khrafa> {
-  final appTitle = 'خرافة';
-  @override
-  void initState() {
-    super.initState();
-    currentTheme.addListener(() {
-      print('Changes');
-      setState(() {});
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: appTitle,
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
-      themeMode: currentTheme.currentTheme(),
-      home: MyHomePage(title: appTitle),
-=======
 import 'package:splashscreen/splashscreen.dart';
-import 'package:page_transition/page_transition.dart';
 import 'config.dart';
 import 'home.dart';
 import 'package:flutter/services.dart';
@@ -93,7 +58,6 @@ class Splash extends StatelessWidget {
       loadingText: Text("Loading"),
       photoSize: 200.0,
       loaderColor: Colors.black54,
->>>>>>> 0d56675941b52fbaf260bba870fa4d0100c47988
     );
   }
 }

@@ -1,73 +1,14 @@
-<<<<<<< HEAD
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
-import 'sliders.dart';
-import 'config.dart';
-import 'rateus.dart';
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          title: Text(
-        title,
-        textDirection: TextDirection.ltr,
-        textAlign: TextAlign.right,
-      )),
-      body: Center(child: Text('My Page!')),
-      bottomNavigationBar: BottomAppBar(
-          child: Container(
-        height: 50.0,
-        child: new Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            IconButton(
-              icon: Icon(Icons.home),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    PageTransition(
-                        type: PageTransitionType.bottomToTop,
-                        child: MyHomePage()));
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.book),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    PageTransition(
-                        type: PageTransitionType.bottomToTop,
-                        child: ComplicatedImageDemo()));
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.music_note),
-              onPressed: () {},
-            ),
-          ],
-        ),
-      )),
-=======
-import 'dart:ui';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:google_fonts_arabic/fonts.dart';
+import 'homescreen.dart';
+import 'contact.dart';
 import 'sliders.dart';
 import 'config.dart';
 import 'rateus.dart';
-import 'contact.dart';
-//import 'audio/try.dart';
+import 'audio/try.dart';
 import 'package:tuple/tuple.dart' show Tuple2;
+import 'dart:ui';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key}) : super(key: key);
@@ -80,12 +21,13 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<Tuple2> _pages = [
     Tuple2('Home', HomeScreen()),
     Tuple2('Library', Library()),
-    //Tuple2('Audio', AudioP()),
+    Tuple2('Audio', AudioP()),
   ];
 
   int _selectedPage = 0;
 
   PageController _pageController = PageController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,9 +39,12 @@ class _MyHomePageState extends State<MyHomePage> {
             style: new TextStyle(
               fontFamily: ArabicFonts.Amiri,
               package: 'google_fonts_arabic',
-              fontSize: 25.0,
+              fontSize: 30.0,
+              color: Colors.black54,
             ),
           ),
+          iconTheme: new IconThemeData(color: Colors.black54),
+          centerTitle: true,
           gradient:
               LinearGradient(colors: [Colors.blue[100], Colors.green[100]])),
       body: PageView(
@@ -112,17 +57,30 @@ class _MyHomePageState extends State<MyHomePage> {
         controller: _pageController,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        iconSize: 25,
+        backgroundColor: Colors.blue[100],
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              color: Colors.black54,
+            ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book),
+            icon: Icon(
+              Icons.auto_stories,
+              color: Colors.black54,
+            ),
             label: 'Library',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.image),
+            icon: Icon(
+              Icons.audiotrack,
+              color: Colors.black54,
+            ),
             label: 'Audio Library',
           ),
         ],
@@ -135,22 +93,12 @@ class _MyHomePageState extends State<MyHomePage> {
           });
         },
       ),
->>>>>>> 0d56675941b52fbaf260bba870fa4d0100c47988
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-<<<<<<< HEAD
-              child: Text('Settings'),
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-            ),
-            ListTile(
-              leading: Icon(Icons.palette),
-=======
-                margin: EdgeInsets.zero,
+                margin: EdgeInsets.only(bottom: 20),
                 padding: EdgeInsets.zero,
                 decoration: BoxDecoration(
                     image: DecorationImage(
@@ -172,12 +120,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 )),
             ListTile(
-              contentPadding: EdgeInsets.all(20.0),
               leading: Icon(
                 Icons.palette,
                 size: 40.0,
               ),
->>>>>>> 0d56675941b52fbaf260bba870fa4d0100c47988
+              contentPadding: EdgeInsets.all(20.0),
               title: Text('Theme'),
               subtitle:
                   Text('Change from light theme to dark theme and backwards'),
@@ -187,15 +134,11 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-<<<<<<< HEAD
-              leading: Icon(Icons.star),
-=======
-              contentPadding: EdgeInsets.all(20.0),
               leading: Icon(
                 Icons.star,
                 size: 40.0,
               ),
->>>>>>> 0d56675941b52fbaf260bba870fa4d0100c47988
+              contentPadding: EdgeInsets.all(20.0),
               title: Text('Rate Us'),
               onTap: () async {
                 int stars = await showDialog(
@@ -208,23 +151,41 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-<<<<<<< HEAD
-              leading: Icon(Icons.phone),
-              title: Text('Contact'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-=======
+              leading: Icon(
+                Icons.phone,
+                size: 40.0,
+              ),
               contentPadding: EdgeInsets.all(20.0),
-              leading: Icon(Icons.phone, size: 40.0),
               title: Text('Contact'),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => Contact()));
-                //  Navigator.pop(context);
->>>>>>> 0d56675941b52fbaf260bba870fa4d0100c47988
+              },
+            ),
+            ListTile(
+              leading: Icon(
+                Icons.info,
+                size: 40.0,
+              ),
+              contentPadding: EdgeInsets.all(20.0),
+              title: Text('About'),
+              onTap: () {
+                showAboutDialog(
+                  context: context,
+                  applicationIcon: Image.asset(
+                    'assets/images/applogo.png',
+                    width: 50,
+                    height: 50,
+                  ),
+                  applicationName: 'Khrafa',
+                  applicationVersion: '1.0.0',
+                  children: <Widget>[
+                    Text(
+                        'Khrafa is free app developed by Khawla Jlassi , Jacer Dabbabi and Imen Ayari. This is a school project made for Holberton School of Tunis'),
+                    Text(
+                        'It is an An integenerational bed-time story , for parents and kids going through folkloric stories of Tunisia')
+                  ],
+                );
               },
             ),
           ],
@@ -233,59 +194,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-<<<<<<< HEAD
-=======
-
-class HomeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          children: <Widget>[
-              
-            Expanded(
-              child: Container(
-          decoration: BoxDecoration(
-           image: DecorationImage(
-            image: AssetImage("assets/images/night.jpg"),
-            fit: BoxFit.cover ),
-        ),
-          child: Text("KHRAFA is  yours and your child  favorite app for good night sleep time"),
-               // child: const Center(
-                 // child: Text('Above'),
-               // ),
-              ),
-            ),
-            const Divider(
-              height: 20,
-              thickness: 5,
-              indent: 20,
-              endIndent: 20,
-            ),
-            Container(
-              padding: const EdgeInsets.only(left: 20),
-              child: Align(
-                alignment: AlignmentDirectional.centerStart,
-                child: Text(
-                  'Subheader',
-                  style: Theme.of(context).textTheme.caption,
-                  textAlign: TextAlign.start,
-                ),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                color: Theme.of(context).colorScheme.primary,
-                child: const Center(
-                  child: Text('Below'),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
->>>>>>> 0d56675941b52fbaf260bba870fa4d0100c47988

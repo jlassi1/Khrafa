@@ -10,7 +10,8 @@ To run the app please follow the instructions in the link below :
 
 ## Usage
 
-```flutter run
+```
+flutter run
 ```
 
 ## Contributing

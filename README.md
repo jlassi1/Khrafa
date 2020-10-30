@@ -16,7 +16,7 @@ flutter run
 
 ##Screenshots
 
-| col 1      | col 2      | col 3      | col 4      |
+| Splash screen      | Home screen      | Audio Library      | Library      |
 |------------|-------------|------------|-------------|
 | ![Splashscreen](https://github.com/jlassi1/Khrafa/blob/main/Screenshots/Screenshot_1604018569.png)      | ![Splashscreen](https://github.com/jlassi1/Khrafa/blob/main/Screenshots/Screenshot_1604017648.png)      | ![Splashscreen](https://github.com/jlassi1/Khrafa/blob/main/Screenshots/Screenshot_1604007113.png)      | ![Splashscreen](https://github.com/jlassi1/Khrafa/blob/main/Screenshots/Screenshot_1604007061.png)      |
 

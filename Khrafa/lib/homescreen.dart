@@ -7,8 +7,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        top: 10.0,
-        bottom: 10.0,
+        top: 20.0,
+        bottom: 20.0,
       ),
       child: Row(
         children: <Widget>[
@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
                   child: Card(
                     elevation: 10,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5),
+                      borderRadius: BorderRadius.circular(10),
                     ),
                     child: Container(
                       width: double.infinity,
@@ -41,9 +41,16 @@ class HomeScreen extends StatelessWidget {
                                         fontSize: 30.0,
                                       )))),
                         ),
-                        back: Image.asset(
-                          "assets/gif/giphy2.gif",
-                          fit: BoxFit.fill,
+                        back: Container(
+                          decoration: new BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: new DecorationImage(
+                              image: AssetImage(
+                                "assets/gif/giphy2.gif",
+                              ),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -53,7 +60,7 @@ class HomeScreen extends StatelessWidget {
                   child: Card(
                     elevation: 10,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5),
+                      borderRadius: BorderRadius.circular(10),
                     ),
                     child: Container(
                       width: double.infinity,
@@ -64,6 +71,7 @@ class HomeScreen extends StatelessWidget {
                         direction: FlipDirection.VERTICAL, // default
                         front: Container(
                           decoration: new BoxDecoration(
+                            borderRadius: BorderRadius.circular(15),
                             image: new DecorationImage(
                               image: AssetImage(
                                 'assets/images/mathal.jpg',
@@ -115,7 +123,7 @@ class HomeScreen extends StatelessWidget {
             child: Card(
               elevation: 10,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(5),
+                borderRadius: BorderRadius.circular(10),
               ),
               child: Container(
                 width: double.infinity,
@@ -127,6 +135,7 @@ class HomeScreen extends StatelessWidget {
                   front: Container(
                     child: Container(
                       decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
                               fit: BoxFit.cover,
                               image: AssetImage('assets/images/beb.jpg'))),

@@ -37,8 +37,8 @@ class _AudioP extends State<AudioP> {
     //         "https://image.shutterstock.com/image-vector/pop-music-text-art-colorful-600w-515538502.jpg"),
     //   ),
     // ),
-    Audio(
-      "assets/audios/rock.mp3",
+      Audio.network(
+      "https://sndup.net/6d6n/rock.mp3",
       //playSpeed: 2.0,
       metas: Metas(
         id: "1",
@@ -48,8 +48,8 @@ class _AudioP extends State<AudioP> {
         image: MetasImage.asset('assets/images/candle.jpg'),
       ),
     ),
-    Audio(
-      "assets/audios/country.mp3",
+    Audio.network(
+      "https://sndup.net/53ff/country.mp3",
       metas: Metas(
         id: "2",
         title: "خرافة ﻭﻟﺪ ﺍﻟﺴﻠﻄﺎﻥ ﻭ ﻭﻟﺪ ﺍﻟﻔﻼﺡ",
@@ -58,8 +58,8 @@ class _AudioP extends State<AudioP> {
         image: MetasImage.asset("assets/images/sultan.jpg"),
       ),
     ),
-    Audio(
-      "assets/audios/electronic.mp3",
+    Audio.network(
+      "https://sendeyo.com/up/d/5b32ce7c70",
       metas: Metas(
         id: "3",
         title: "خرافة سبعة صبايا في قصبايا",
@@ -68,8 +68,8 @@ class _AudioP extends State<AudioP> {
         image: MetasImage.asset("assets/images/images.jpg"),
       ),
     ),
-    Audio(
-      "assets/audios/hiphop.mp3",
+    Audio.network(
+      "https://sendeyo.com/up/d/946d178b9a",
       metas: Metas(
         id: "4",
         title: "خرافة ودعة وخواتها السبعة",
@@ -78,8 +78,8 @@ class _AudioP extends State<AudioP> {
         image: MetasImage.asset("assets/images/girl.jpg"),
       ),
     ),
-    Audio(
-      "assets/audios/pop.mp3",
+    Audio.network(
+      "https://sndup.net/529p/pop.mp3",
       metas: Metas(
         id: "5",
         title: "خرافة  كيف إنهق لبهيم فالبحر",
@@ -88,8 +88,8 @@ class _AudioP extends State<AudioP> {
         image: MetasImage.asset("assets/images/donkey.jpg"),
       ),
     ),
-    Audio(
-      "assets/audios/instrumental.mp3",
+    Audio.network(
+      "https://sndup.net/7ff6/instrumental.mp3",
       metas: Metas(
         id: "6",
         title: "خرافة العسل والثلاثة بنات",
@@ -99,7 +99,6 @@ class _AudioP extends State<AudioP> {
       ),
     ),
   ];
-
   //final AssetsAudioPlayer _assetsAudioPlayer = AssetsAudioPlayer();
   AssetsAudioPlayer get _assetsAudioPlayer => AssetsAudioPlayer.withId("music");
   final List<StreamSubscription> _subscriptions = [];
@@ -151,7 +150,7 @@ class _AudioP extends State<AudioP> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: NeumorphicTheme.baseColor(context),
+      backgroundColor: Colors.transparent,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(

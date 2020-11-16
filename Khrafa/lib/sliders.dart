@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts_arabic/fonts.dart';
 import 'stories/story2.dart';
@@ -7,16 +6,12 @@ import 'stories/story5.dart';
 import 'stories/story4.dart';
 import 'stories/story3.dart';
 import 'package:simple_animations/simple_animations.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts_arabic/fonts.dart';
-
 
 class Library extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-            debugShowCheckedModeBanner: false,
-  
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
         '/': (context) => SliderScreen(),
@@ -36,14 +31,12 @@ class SliderScreen extends StatefulWidget {
 }
 
 class _SliderScreenState extends State<SliderScreen> {
-
   final List<List<String>> products = [
-    ['assets/images/images.jpg', "خرافة ودعة و خواتها السبعة", '/pg2'],
-
-    ['assets/images/candle.jpg', "خرافة الشمعة", '/abt'],
-    [ 'assets/images/threeword.jpg',  "خرافة الثلاثة كلمات", '/pg3' ],
-    ['assets/images/sevenhappy.jpg', 'خرافة سبعة فرحات', '/bbb'],
-    ['assets/images/soltan.jpg', 'خرافة ولد الساطان و ولد الفلاح', '/aaa']
+    ['assets/images/images.jpg', " ودعة و خواتها السبعة", '/pg2'],
+    ['assets/images/candle.jpg', " الشمعة", '/abt'],
+    ['assets/images/threeword.jpg', " الثلاثة كلمات", '/pg3'],
+    ['assets/images/sevenhappy.jpg', 'سبعة فرحات', '/bbb'],
+    ['assets/images/soltan.jpg', ' ولد السلطان و ولد الفلاح', '/aaa']
   ];
 
   int currentIndex = 0;
@@ -71,107 +64,97 @@ class _SliderScreenState extends State<SliderScreen> {
   @override
   Widget build(BuildContext context) {
     final _screenSize = MediaQuery.of(context).size;
-    return  Container(
-     margin: const EdgeInsets.only(top: 10, left: 10, right:10, bottom: 50),
-        color: Colors.white,
-        child: Column(
-          children: <Widget>[
-            GestureDetector(
-              onHorizontalDragEnd: (DragEndDetails details) {
-                if (details.velocity.pixelsPerSecond.dx > 0) {
-                  _preve();
-                } else if (details.velocity.pixelsPerSecond.dx < 0) {
-                  _next();
-                }
-              }, child: FadeAnimation(.8, Container(
-                width: double.infinity,
-                height: 600,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(products[currentIndex][0]),
-                    fit: BoxFit.cover
-                  )
-                ),
-                    child: Container(
-                      
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: <Widget>[
-                          FadeAnimation(
-                              1,
-                              Container(
-                                width: 90,
-                                margin: EdgeInsets.only(bottom: 60),
-                                child: Row(
-                                  children: _buildIndicator(),
-                                ),
-                              ))
-                        ],
-                      ),
-                    ),
-                  )),
-            ),
-            Expanded(
-              child: Transform.translate(
-                offset: Offset(0, -40),
-                child: FadeAnimation(
-                    1,
-                    Container(
-                      width: double.infinity,
-                      padding: EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                      
-                          color: Colors.white,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(50), topRight: Radius.circular(50))
-                        
-                      ),
-                     height: _screenSize.height * 0.2,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          FadeAnimation(
-                              1.3,
-                                ClipRRect(
-                                    borderRadius: BorderRadius.circular(15.0),
-
-                                     child: Align(
-                              alignment: Alignment.bottomCenter,
-                                      child: RaisedButton(
-                                         
-                                          child: Text(
-                                products[currentIndex][1],
-                                 textScaleFactor: 2,
-                                   textDirection: TextDirection.rtl,
-                          style: new TextStyle(
-                           backgroundColor: Colors.transparent,
-                             color: Colors.black54,
-                           fontFamily: ArabicFonts.Aref_Ruqaa,
-                         package: 'google_fonts_arabic',
-                       fontSize: 18.0,)
+    return Container(
+      margin: const EdgeInsets.only(top: 20, left: 10, right: 10, bottom: 50),
+      color: Colors.transparent,
+      child: Column(
+        children: <Widget>[
+          GestureDetector(
+            onHorizontalDragEnd: (DragEndDetails details) {
+              if (details.velocity.pixelsPerSecond.dx > 0) {
+                _preve();
+              } else if (details.velocity.pixelsPerSecond.dx < 0) {
+                _next();
+              }
+            },
+            onTap: () {
+              Navigator.pushNamed(
+                  context, products[currentIndex][2].toString());
+            },
+            child: FadeAnimation(
+                .8,
+                Container(
+                  width: double.infinity,
+                  height: 620,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(products[currentIndex][0]),
+                          fit: BoxFit.cover),
+                      borderRadius: BorderRadius.circular(30)),
+                  child: Container(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        FadeAnimation(
+                            1,
+                            Container(
+                              width: 90,
+                              margin: EdgeInsets.only(bottom: 60),
+                              child: Row(
+                                children: _buildIndicator(),
                               ),
-                                            color: Colors.orange[800],
-                                          onPressed: () {
-                                            Navigator.pushNamed(
-                                                context,
-                                                products[currentIndex][2]
-                                                    .toString());
-                                          },
-                                          padding: EdgeInsets.all(8),
-                                        ),
-                                     ),
-                                    ),
-
-                             ),
-                         
-                          
-                        ],
-                      ),
-                    )),
+                            ))
+                      ],
+                    ),
+                  ),
+                )),
+          ),
+          Expanded(
+            child: Transform.translate(
+              offset: Offset(0, 10),
+              child: FadeAnimation(
+                1,
+                GestureDetector(
+                  child: Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(8),
+                    margin: EdgeInsets.only(top:20, bottom: 40, left:20, right: 20),
+                    height: 20,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(50),
+                            topRight: Radius.circular(50),
+                            bottomLeft: Radius.circular(50),
+                            bottomRight: Radius.circular(50))
+                            
+                            ),
+                    child: Center(
+                        child: Text(products[currentIndex][1],
+                            textScaleFactor: 2,
+                            textDirection: TextDirection.rtl,
+                            textAlign: TextAlign.left,
+                            style: new TextStyle(
+                              decoration: TextDecoration.none,
+                              backgroundColor: Colors.transparent,
+                              color: Colors.black87,
+                              fontFamily: ArabicFonts.Aref_Ruqaa,
+                              package: 'google_fonts_arabic',
+                              fontSize: 18.0,
+                            ))
+                            
+                            ),
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(
+                        context, products[currentIndex][2].toString());
+                  },
+                ),
               ),
-            )
-          ],
-        ),
-      
+            ),
+          ),
+        ],
+      ),
     );
   }
 

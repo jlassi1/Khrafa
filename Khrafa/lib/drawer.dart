@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'contact.dart';
 import 'config.dart';
 import 'rateus.dart';
+import 'home.dart';
 import 'dart:ui';
 
 class DrawerClass extends StatelessWidget {
@@ -33,6 +34,18 @@ class DrawerClass extends StatelessWidget {
                   ),
                 ),
               )),
+          ListTile(
+            leading: Icon(
+              Icons.home,
+              size: 40.0,
+            ),
+            contentPadding: EdgeInsets.all(20.0),
+            title: Text('Home'),
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => MyHomePage()));
+            },
+          ),
           ListTile(
             leading: Icon(
               Icons.palette,

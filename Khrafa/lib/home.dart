@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'homescreen.dart';
 import 'sliders.dart';
 import 'drawer.dart';
-import 'stories/story1.dart';
 import 'audio/try.dart';
 import 'package:tuple/tuple.dart' show Tuple2;
+
+
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key}) : super(key: key);
@@ -19,9 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Tuple2('Library',Library()),
     Tuple2('Audio', AudioP()),
   ];
-
   PageController _pageController = PageController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -27,6 +27,7 @@ class Khrafa extends StatefulWidget {
 
 class _KhrafaState extends State<Khrafa> {
   final appTitle = 'خرافة';
+  // initialization state
   @override
   void initState() {
     super.initState();
@@ -38,6 +39,7 @@ class _KhrafaState extends State<Khrafa> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
+    //top levet widgets
     return MaterialApp(
       title: appTitle,
       debugShowCheckedModeBanner: false,
@@ -96,8 +98,7 @@ class _SplashState extends State<Splash> {
         ),
       ),
       image: new Image.asset('assets/images/splash.png'),
-      loadingText: Text("Loading"),
-      
+      loadingText: Text("Loading"),      
       photoSize: 200.0,
       loaderColor: Colors.black54,
     );
